@@ -1,0 +1,222 @@
+{
+  "success": true,
+  "debug": {
+    "user_id": 8,
+    "tables": {
+      "playlists": {
+        "exists": true,
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "is_nullable": "NO",
+            "column_default": "nextval('playlists_id_seq'::regclass)"
+          },
+          {
+            "column_name": "user_id",
+            "data_type": "integer",
+            "is_nullable": "NO",
+            "column_default": null
+          },
+          {
+            "column_name": "name",
+            "data_type": "character varying",
+            "is_nullable": "NO",
+            "column_default": null
+          },
+          {
+            "column_name": "description",
+            "data_type": "text",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "column_name": "status",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'draft'::character varying"
+          },
+          {
+            "column_name": "loop_enabled",
+            "data_type": "boolean",
+            "is_nullable": "YES",
+            "column_default": "true"
+          },
+          {
+            "column_name": "schedule_enabled",
+            "data_type": "boolean",
+            "is_nullable": "YES",
+            "column_default": "false"
+          },
+          {
+            "column_name": "start_time",
+            "data_type": "time without time zone",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "column_name": "end_time",
+            "data_type": "time without time zone",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "column_name": "selected_days",
+            "data_type": "ARRAY",
+            "is_nullable": "YES",
+            "column_default": "'{}'::text[]"
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "column_name": "updated_at",
+            "data_type": "timestamp without time zone",
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "column_name": "scale_image",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'fit'::character varying"
+          },
+          {
+            "column_name": "scale_video",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'fit'::character varying"
+          },
+          {
+            "column_name": "scale_document",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'fit'::character varying"
+          },
+          {
+            "column_name": "shuffle",
+            "data_type": "boolean",
+            "is_nullable": "YES",
+            "column_default": "false"
+          },
+          {
+            "column_name": "default_transition",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'fade'::character varying"
+          },
+          {
+            "column_name": "transition_speed",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'normal'::character varying"
+          },
+          {
+            "column_name": "auto_advance",
+            "data_type": "boolean",
+            "is_nullable": "YES",
+            "column_default": "true"
+          },
+          {
+            "column_name": "background_color",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'#000000'::character varying"
+          },
+          {
+            "column_name": "text_overlay",
+            "data_type": "boolean",
+            "is_nullable": "YES",
+            "column_default": "false"
+          }
+        ],
+        "missing_columns": [],
+        "sample_data": [
+          {
+            "id": 1,
+            "user_id": 8,
+            "name": "New PL",
+            "description": "",
+            "status": "draft",
+            "loop_enabled": true,
+            "schedule_enabled": false,
+            "start_time": null,
+            "end_time": null,
+            "selected_days": [],
+            "created_at": "2025-06-26T20:32:32.614Z",
+            "updated_at": "2025-06-26T20:32:32.614Z",
+            "scale_image": "fit",
+            "scale_video": "fit",
+            "scale_document": "fit",
+            "shuffle": false,
+            "default_transition": "fade",
+            "transition_speed": "normal",
+            "auto_advance": true,
+            "background_color": "#000000",
+            "text_overlay": false
+          }
+        ]
+      },
+      "playlist_items": {
+        "exists": true,
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "is_nullable": "NO",
+            "column_default": "nextval('playlist_items_id_seq'::regclass)"
+          },
+          {
+            "column_name": "playlist_id",
+            "data_type": "integer",
+            "is_nullable": "NO",
+            "column_default": null
+          },
+          {
+            "column_name": "media_file_id",
+            "data_type": "integer",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "column_name": "position",
+            "data_type": "integer",
+            "is_nullable": "NO",
+            "column_default": "0"
+          },
+          {
+            "column_name": "duration",
+            "data_type": "integer",
+            "is_nullable": "YES",
+            "column_default": null
+          },
+          {
+            "column_name": "transition_type",
+            "data_type": "character varying",
+            "is_nullable": "YES",
+            "column_default": "'fade'::character varying"
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "missing_columns": [
+          "media_id"
+        ],
+        "sample_data": []
+      }
+    },
+    "summary": {
+      "playlists_table_ready": true,
+      "playlist_items_table_ready": false,
+      "total_playlists": 1,
+      "total_playlist_items": 0
+    }
+  }
+}
